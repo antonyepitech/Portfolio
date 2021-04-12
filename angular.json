@@ -40,7 +40,8 @@
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
               "node_modules/hammerjs/hammer.min.js",
-              "src/app/strokes.js"
+              "src/app/home/strokes.js",
+              "src/app/background.js"
             ]
           },
           "configurations": {

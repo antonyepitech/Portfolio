@@ -3,7 +3,17 @@
   margin: 0;
 }
 body{
-  background-color: black;
+  /*background-color: #23243b;*/
+  background: radial-gradient(ellipse at center, rgba(35,36,59,1) 0%, rgba(35,36,59,1) 100%);
+}
+
+#stars {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 16rem;
+  height: 100vh;
+  z-index: 1;
 }
 
 
