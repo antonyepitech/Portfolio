@@ -18,9 +18,14 @@ window.onload = function() {
 
   let infoId = document.getElementById("infos");
   const buttons = document.getElementsByClassName("infos");
+  let buttonSelected = null;
+  let bool = true;
+
+  let banniere = document.getElementById('banniere');
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
+      buttonSelected = this;
       infoId.innerHTML = this.innerHTML;
       infoId.style = "color: #2df5ff;";
       infoId.style = "zIndex: -100;";
@@ -31,14 +36,15 @@ window.onload = function() {
     let paragraphe = document.getElementById("paragraphe");
     if(infoId.innerHTML !== ""){
       banniere.style = "display: flex;"
-      paragraphe.innerHTML = "TOTO";
+      for (let i = 0; i < buttons.length; i++) {
+        paragraphe.innerHTML = buttonSelected.dataset.title;
+      }
       infoId.addEventListener("mouseleave", function () {
-        let banniere = document.getElementById('banniere');
-        banniere.style = "display: none;"
+        if (bool){
+          banniere.style = "display: none;"
+        }
       })
     }
   })
-
-
 }
 
